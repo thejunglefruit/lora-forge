@@ -1,0 +1,125 @@
+{
+  "_meta": {
+    "schema_version": 1,
+    "note": "Data-driven model registry. EVERYTHING model-specific comes from here (config_gen, estimate, intake, caption). Structure and keys are this project's own design.",
+    "verify_warning": "name_or_path and arch must be checked against the REAL ai-toolkit repo installed before training. Models marked status='unverified' must not be used until confirmed.",
+    "pod_hourly_rate_usd": 0.69
+  },
+
+  "models": {
+    "flux": {
+      "status": "active",
+      "display_name": "FLUX.1 dev",
+      "arch": "flux",
+      "name_or_path": "black-forest-labs/FLUX.1-dev",
+      "backend": "ai-toolkit",
+      "vram_gb": 24,
+      "caption_engine": "dual",
+      "trigger_required": true,
+      "license": {
+        "id": "FLUX.1-dev Non-Commercial License",
+        "commercial_use": false,
+        "note": "FLUX.1 dev weights are NON-commercial. This affects whether the resulting LoRA can be sold. VERIFY at the source."
+      },
+      "preset": {
+        "rank": 16,
+        "alpha": 16,
+        "lr": 0.0001,
+        "optimizer": "adamw8bit",
+        "noise_scheduler": "flowmatch",
+        "sampler": "flowmatch",
+        "guidance_scale": 4.0,
+        "sample_steps": 20,
+        "base_steps": 2000,
+        "steps_per_image": 100,
+        "steps_min": 1200,
+        "steps_max": 3500,
+        "resolutions": [1024],
+        "dtype": "bf16",
+        "quantize": true
+      },
+      "sec_per_step": {},
+      "requirements": {
+        "character": {"imgs_min": 15, "imgs_rec": 25, "res_floor": 1024, "max_closeup_ratio": 0.4, "one_subject": true},
+        "style":     {"imgs_min": 20, "imgs_rec": 40, "res_floor": 1024},
+        "object":    {"imgs_min": 15, "imgs_rec": 25, "res_floor": 1024}
+      },
+      "validation_thresholds": {"character_arcface": 0.5, "object_clip": 0.8, "style_clip": 0.7}
+    },
+
+    "sdxl": {
+      "status": "unverified",
+      "display_name": "SDXL 1.0",
+      "arch": "sdxl",
+      "name_or_path": "stabilityai/stable-diffusion-xl-base-1.0",
+      "backend": "ai-toolkit",
+      "vram_gb": 16,
+      "caption_engine": "tags",
+      "trigger_required": true,
+      "license": {"id": "CreativeML OpenRAIL++-M", "commercial_use": true, "note": "VERIFY the use restrictions."},
+      "preset": {
+        "rank": 32, "alpha": 16, "lr": 0.0001, "optimizer": "adamw8bit",
+        "noise_scheduler": "ddpm", "sampler": "euler", "guidance_scale": 7.0, "sample_steps": 25,
+        "base_steps": 2000, "steps_per_image": 100, "steps_min": 1200, "steps_max": 4000,
+        "resolutions": [1024], "dtype": "bf16", "quantize": false
+      },
+      "sec_per_step": {},
+      "requirements": {
+        "character": {"imgs_min": 15, "imgs_rec": 25, "res_floor": 1024, "max_closeup_ratio": 0.4, "one_subject": true},
+        "style":     {"imgs_min": 20, "imgs_rec": 50, "res_floor": 1024},
+        "object":    {"imgs_min": 15, "imgs_rec": 25, "res_floor": 1024}
+      },
+      "validation_thresholds": {"character_arcface": 0.5, "object_clip": 0.8, "style_clip": 0.7}
+    },
+
+    "z-image": {
+      "status": "unverified",
+      "display_name": "Z-Image",
+      "arch": "z_image",
+      "name_or_path": "VERIFY",
+      "backend": "ai-toolkit",
+      "vram_gb": 12,
+      "caption_engine": "natural",
+      "trigger_required": false,
+      "license": {"id": "VERIFY", "commercial_use": null, "note": "To verify at the source."},
+      "preset": {
+        "rank": 16, "alpha": 16, "lr": 0.0002, "optimizer": "adamw8bit",
+        "noise_scheduler": "flowmatch", "sampler": "flowmatch", "guidance_scale": 4.0, "sample_steps": 20,
+        "base_steps": 1500, "steps_per_image": 120, "steps_min": 900, "steps_max": 2500,
+        "resolutions": [1024], "dtype": "bf16", "quantize": true
+      },
+      "sec_per_step": {},
+      "requirements": {
+        "character": {"imgs_min": 9, "imgs_rec": 15, "res_floor": 1024, "max_closeup_ratio": 0.4, "one_subject": true},
+        "style":     {"imgs_min": 15, "imgs_rec": 30, "res_floor": 1024},
+        "object":    {"imgs_min": 12, "imgs_rec": 20, "res_floor": 1024}
+      },
+      "validation_thresholds": {"character_arcface": 0.5, "object_clip": 0.8, "style_clip": 0.7}
+    },
+
+    "qwen-image": {
+      "status": "unverified",
+      "display_name": "Qwen-Image",
+      "arch": "qwen_image",
+      "name_or_path": "VERIFY",
+      "backend": "ai-toolkit",
+      "vram_gb": 40,
+      "caption_engine": "natural",
+      "trigger_required": true,
+      "license": {"id": "VERIFY", "commercial_use": null, "note": "To verify."},
+      "preset": {
+        "rank": 16, "alpha": 16, "lr": 0.0001, "optimizer": "adamw8bit",
+        "noise_scheduler": "flowmatch", "sampler": "flowmatch", "guidance_scale": 4.0, "sample_steps": 20,
+        "base_steps": 2000, "steps_per_image": 100, "steps_min": 1200, "steps_max": 3500,
+        "resolutions": [1024], "dtype": "bf16", "quantize": true
+      },
+      "sec_per_step": {},
+      "requirements": {
+        "character": {"imgs_min": 15, "imgs_rec": 25, "res_floor": 1024, "max_closeup_ratio": 0.4, "one_subject": true},
+        "style":     {"imgs_min": 20, "imgs_rec": 40, "res_floor": 1024},
+        "object":    {"imgs_min": 15, "imgs_rec": 25, "res_floor": 1024}
+      },
+      "validation_thresholds": {"character_arcface": 0.5, "object_clip": 0.8, "style_clip": 0.7}
+    }
+  }
+}
