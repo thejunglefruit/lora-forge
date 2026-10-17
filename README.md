@@ -107,8 +107,4 @@ Honest state of things:
 
 Made by a motion and creative technologist working with AI agents, as the dataset side of a larger image and video pipeline.
 
----
-
-**En español:** orquestador de datasets y entrenamiento de LoRAs. Valida el dataset y se detiene hasta que una persona revisa los avisos, escribe las captions según el tipo de LoRA y el modelo base, genera la configuración de ai-toolkit y estima VRAM, tiempo y coste antes de alquilar una GPU. CLI y web (React + FastAPI) sobre el mismo núcleo; el entrenamiento real corre en una GPU alquilada.
-
 Licence: GPL-3.0-or-later (see `LICENSE`)
