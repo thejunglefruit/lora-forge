@@ -3,7 +3,7 @@ name = "lora-forge"
 version = "0.1.0"
 description = "Dataset + LoRA training orchestrator (not a trainer: it wraps ai-toolkit)"
 readme = "README.md"
-license = "GPL-3.0-or-later"
+license = "AGPL-3.0-or-later"
 requires-python = ">=3.10"
 dependencies = [
     "typer>=0.12",

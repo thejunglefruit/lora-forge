@@ -107,4 +107,8 @@ Honest state of things:
 
 Made by a motion and creative technologist working with AI agents, as the dataset side of a larger image and video pipeline.
 
-Licence: GPL-3.0-or-later (see `LICENSE`)
+Licence: AGPL-3.0-or-later (see `LICENSE`): free to use, study, change and share. If you run a modified version
+as a network service, you must offer its users the source code of that version.
+
+**Commercial licence.** If you want to use it in a closed product or service without the AGPL obligations, a
+commercial licence is available: thejunglefruit@proton.me

@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (c) 2026 The Jungle Fruit
 """Builds a demo project with synthetic images (drawn in code: no photos, no people) and runs
 the mock flow up to a config, so the web app has something to show.

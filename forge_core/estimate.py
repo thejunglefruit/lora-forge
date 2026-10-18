@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (c) 2026 The Jungle Fruit
 """VRAM, time and cost estimate BEFORE launching a run.
 

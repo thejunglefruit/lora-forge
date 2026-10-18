@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (c) 2026 The Jungle Fruit
 """Web layer tests: the same flow as the CLI (new -> ingest -> mock caption -> config -> mock train ->
 report -> pick), plus the local-only guards (Host, Origin, path traversal)."""

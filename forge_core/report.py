@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (c) 2026 The Jungle Fruit
 """Run note in Markdown with YAML frontmatter (works in Obsidian and any Markdown tool).
 

@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (c) 2026 The Jungle Fruit
 """Real captioner backed by a local vision model served by Ollama (default: minicpm-v4.5:8b,
 override with FORGE_CAPTION_MODEL). It follows the doctrine (what to describe / what to omit)

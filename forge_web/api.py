@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: AGPL-3.0-or-later
 # Copyright (c) 2026 The Jungle Fruit
 """LoRA Forge web layer (FastAPI) over forge_core. A thin frontend: every endpoint calls the SAME
 functions as the CLI (new / ingest / caption / config / train / report / pick) and serves the
