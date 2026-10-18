@@ -103,9 +103,9 @@ Honest state of things:
 - The licence of the base model travels with the LoRA. FLUX.1 dev is non-commercial, so every run note says so at the top.
 - An estimate is only useful once it is calibrated. The first run on each GPU measures sec/step and stores it, and the next estimate uses that number instead of the fallback.
 
-## Built with AI-assisted workflows
+## About
 
-Made by a motion and creative technologist working with AI agents, as the dataset side of a larger image and video pipeline.
+Made by The Jungle Fruit, a motion and creative technologist, as the dataset side of a larger image and video pipeline.
 
 Licence: AGPL-3.0-or-later (see `LICENSE`): free to use, study, change and share. If you run a modified version
 as a network service, you must offer its users the source code of that version.
